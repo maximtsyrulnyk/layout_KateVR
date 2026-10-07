@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>KatVR</title>
+    <link rel="icon" type="image/x-icon"
+    href="/layout_KateVR/assets/favicon-CUf6Pr2U.ico">
+    <link rel="stylesheet" crossorigin href="/layout_KateVR/assets/index-CVFhiolk.css">
+  </head>
+  <body class="page">
+    <div class="page__body">
+
+      <!-- #region header -->
+      <header class="page__header" id="top">
+        <div class="top-bar">
+          <div class="top-bar__brand">
+            <a href="#top" class="top-bar__logo page-link">
+              <img src="data:image/png;base64,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" alt="KateVR">
+            </a>
+
+            <a href="#menu-language" class="top-bar__lang">
+              En
+              <img src="data:image/svg+xml,%3csvg%20width='8'%20height='5'%20viewBox='0%200%208%205'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.89697%204.5L-0.000142651%202.19575e-07L7.79409%209.00968e-07L3.89697%204.5Z'%20fill='%2305C2DF'/%3e%3c/svg%3e" alt="Change Language">
+            </a>
+          </div>
+
+          <div class="top-bar__group">
+            <nav class="top-bar__nav">
+              <a href="#about" class="page-link">About</a>
+              <a href="#tech" class="page-link">Tech</a>
+              <a href="#benefits" class="page-link">Benefits</a>
+              <a href="#contact" class="page-link">Contact</a>
+            </nav>
+
+            <div class="top-bar__actions">
+              <a href="#contact" class="top-bar__buy page-link">Buy Now</a>
+            </div>
+          </div>
+
+          <!-- only on mobile & tablet -->
+          <a href="#menu" class="top-bar__burger page-link">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAGpJREFUeAHt1kENgDAMheFXMiGzghKsIWVSJmEORjHADkszIP+XND300vTQPAkAgBn2NOy9n94OLbQJAEKZ/7qsOM3MmibcC3bFKb7grgnJqyrO1PUA/MEosGZvWQu9PlGnwbx6FQEA8FkXu10YtUDJONUAAAAASUVORK5CYII=" alt="Menu">
+          </a>
+        </div>
+
+        <div class="hero">
+          <picture class="hero__img">
+            <source media="(min-width: 1280px)" srcset="/layout_KateVR/assets/hero-desktop-CRSY8uR-.png">
+            <source media="(min-width: 640px)" srcset="/layout_KateVR/assets/hero-tablet-B-027pth.png">
+            <img src="/layout_KateVR/assets/hero-mobile-Dx7CzR9z.png" alt="KAT VR loco devices">
+          </picture>
+
+          <div class="hero__content">
+            <h1 class="hero__title">THE NEW START OF <br><span>VR LOCOMOTION</span></h1>
+            <p class="hero__description">Discover the most comprehensive VR Locomotion system, and unlock infinite motion in any games on any platform!</p>
+            <p class="hero__price">1200$</p>
+
+            <div class="hero__actions">
+              <a href="#video" class="play-btn hero__play">
+                <img src="/layout_KateVR/assets/video-btn-aw3tN15W.svg" alt="Play Video"
+                class="play-btn__img play-btn__img--default">
+                <img src="/layout_KateVR/assets/video-selected-btn-CzIErQTt.svg" alt="Play Video"
+                class="play-btn__img play-btn__img--hover">
+              </a>
+            </div>
+          </div>
+
+          <!-- only desktop -->
+          <div class="hero__nav">
+            <div class="hero__nav-links">
+              <a href="#contact" class="hero__nav-link page-link">FAQ</a>
+              <a href="#menu-help" class="hero__nav-link page-link">Help</a>
+            </div>
+
+            <a href="#more" class="hero__nav-more page-link">
+              More
+              <img src="data:image/svg+xml,%3csvg%20width='8'%20height='5'%20viewBox='0%200%208%205'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.89697%204.5L-0.000142651%202.19575e-07L7.79409%209.00968e-07L3.89697%204.5Z'%20fill='%2305C2DF'/%3e%3c/svg%3e" alt="More">
+            </a>
+
+            <div class="hero__nav-controls">
+              <a href="#previous" class="page-link hero__nav-btn hero__nav-btn--active">Previous</a>
+              <a href="#next" class="page-link hero__nav-btn">Next</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- #endregion -->
+
+      <!-- #region menu -->
+      <!-- #region menu -->
+      <aside class="page__menu">
+        <div id="menu" class="menu">
+          <a href="#top" class="menu__close">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAPlJREFUeAHN2G0NwyAQBmAkVEIlVEodzMIkzMmkTEIlTEIlvKMbzQgJLR937/WS+wNNeAKUIzjnA8DT580ZhB938PnyOe0NM/5BRQXMEsZe4o4HG5Vg3j7H9AMa6hTDRBVjGKhqjCaqGaOB6sZIosQwEihxTA9KDdOCUsfUoGiYEhQdc4Qyw2RQd1NMBmWLCaBtmdZ4ppxVJHtmzW10C8x3mWBwyctioj4uCgW/Ng2FinNGHYWGQ08NhY4TWBwFgXIghoJgbepGQaFQNqOgWLWrUSBcIYpRDEwxiok5RVlgDlH4PRbRMRnUvDVMYYZGZxQBtRkGd5XYMR8bjTSe1Y/+ygAAAABJRU5ErkJggg==" alt="Close">
+          </a>
+
+          <nav class="menu__nav">
+            <a href="#about" class="page-link">About</a>
+            <a href="#tech" class="page-link">Tech</a>
+            <a href="#benefits" class="page-link">Benefits</a>
+            <a href="#contact" class="page-link">Contact</a>
+            <a href="#menu-language" class="page-link">Language</a>
+            <a href="#contact" class="page-link">FAQ</a>
+            <a href="#menu-help" class="page-link">Help</a>
+          </nav>
+        </div>
+
+        <div id="menu-language" class="menu menu--language">
+          <a href="#menu" class="menu__back">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAGlJREFUeAHtzsENgCAQRNFZK6AES6AFK7M0SsAOLEE7WJe4XjyyXEjmJxPg8gIQTFWTrdgyojlW9a0i0g87bSt6I0aMGLEusDh2hTEHs2OtHSMiSpQo0fnQBYFE5LBjs93tiVHZ79J3fwCE5CCtlV9IUAAAAABJRU5ErkJggg==" alt="Back">
+          </a>
+
+          <ul class="menu__lang-list">
+            <li><a href="#" class="page-link page-link--active">English</a></li>
+            <li><a href="#" class="page-link">Arabic</a></li>
+            <li><a href="#" class="page-link">Chinese (Simplified)</a></li>
+            <li><a href="#" class="page-link">Chinese (Traditional)</a></li>
+            <li><a href="#" class="page-link">French</a></li>
+            <li><a href="#" class="page-link">German</a></li>
+            <li><a href="#" class="page-link">Italian</a></li>
+            <li><a href="#" class="page-link">Polish</a></li>
+            <li><a href="#" class="page-link">Russian</a></li>
+            <li><a href="#" class="page-link">Ukrainian</a></li>
+          </ul>
+        </div>
+
+        <div class="menu menu--help" id="menu-help">
+          <a href="#top" class="menu__close">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAPlJREFUeAHN2G0NwyAQBmAkVEIlVEodzMIkzMmkTEIlTEIlvKMbzQgJLR937/WS+wNNeAKUIzjnA8DT580ZhB938PnyOe0NM/5BRQXMEsZe4o4HG5Vg3j7H9AMa6hTDRBVjGKhqjCaqGaOB6sZIosQwEihxTA9KDdOCUsfUoGiYEhQdc4Qyw2RQd1NMBmWLCaBtmdZ4ppxVJHtmzW10C8x3mWBwyctioj4uCgW/Ng2FinNGHYWGQ08NhY4TWBwFgXIghoJgbepGQaFQNqOgWLWrUSBcIYpRDEwxiok5RVlgDlH4PRbRMRnUvDVMYYZGZxQBtRkGd5XYMR8bjTSe1Y/+ygAAAABJRU5ErkJggg==" alt="Close menu">
+          </a>
+
+          <h2 class="menu--help-title">
+            HOW CAN WE <span>HELP</span> YOU?
+          </h2>
+
+          <p class="menu--help-text">
+            Welcome to our help center. Our goal is to make the process of getting
+            acquainted and purchase as easy and pleasant as possible. Need help with
+            your KAT VR loco product? Many product questions can be resolved by
+            reviewing our Product Support
+            <a href="#contact" class="menu--help-inline-link">FAQs</a>.
+          </p>
+
+          <p class="menu--help-text">
+            Please also feel free to
+            <a href="#contact" class="menu--help-inline-link">Contact Us</a>
+            directly should you need anything further. We're happy to help.
+          </p>
+
+          <ul class="menu--help-links">
+            <li><a href="#" class="menu--help-link">Instruction manual</a></li>
+            <li><a href="#" class="menu--help-link">Where to go for a warranty</a></li>
+            <li><a href="#" class="menu--help-link">Service Policy</a></li>
+          </ul>
+
+          <ul class="menu--help-contacts">
+            <li><a href="tel:+8605718610 5373">+86-0571-86105373</a></li>
+            <li><a href="mailto:global@katvr.com">global@katvr.com</a></li>
+            <li><a href="mailto:overseas@katvr.com">overseas@katvr.com</a></li>
+          </ul>
+        </div>
+      </aside>
+      <!-- #endregion -->
+
+      <!-- #region main -->
+      <main class="page__main">
+        <section class="more" id="benefits">
+          <div class="more__header">
+            <h2 class="more__title">MORE THAN <img src="data:image/png;base64,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" alt="GAMING!"
+              class="more__title-image">
+            </h2>
+            <p class="more__subtitle">This also made for people who are interested in...</p>
+          </div>
+
+          <ul class="more__list">
+            <li class="more__item">
+              <img src="data:image/png;base64,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" alt="Education"
+              class="more__icon">
+              <h3 class="more__item-title">EDUCATION</h3>
+              <p class="more__item-text">Create aducational simulations, trainings and much more with unlimited virtual space and minimum physical space</p>
+            </li>
+
+            <li class="more__item">
+              <img src="/layout_KateVR/assets/more-realestate-h4Y1RvzI.png" alt="Real Estate"
+              class="more__icon">
+              <h3 class="more__item-title">REAL ESTATE</h3>
+              <p class="more__item-text">Desighn architectural projects in a deeply realistic environment allowing visitors to freely walk around, and feel their vibe</p>
+            </li>
+
+            <li class="more__item">
+              <img src="/layout_KateVR/assets/more-fitness-CQV3nGgi.png" alt="Fitness"
+              class="more__icon">
+              <h3 class="more__item-title">FITNESS</h3>
+              <p class="more__item-text">Combine business with pleasure, and discover countless ways to stay fit while playing your favorite VR Games!</p>
+            </li>
+
+            <li class="more__item">
+              <img src="/layout_KateVR/assets/more-social-9r07ZLXA.png" alt="Social"
+              class="more__icon">
+              <h3 class="more__item-title">SOCIAL INTERACTIONS</h3>
+              <p class="more__item-text">Hang out with your friends in the virtual world when you can't meet space requirements</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="about" id="about">
+          <div class="about__product">
+            <h2 class="about__product-title about__title">ABOUT <span>PRODUCT</span></h2>
+
+            <div class="about__slider">
+              <input type="radio" name="about-slider"
+              id="slide-1" class="about__radio"
+              checked>
+              <input type="radio" name="about-slider"
+              id="slide-2" class="about__radio">
+              <input type="radio" name="about-slider"
+              id="slide-3" class="about__radio">
+              <input type="radio" name="about-slider"
+              id="slide-4" class="about__radio">
+              <input type="radio" name="about-slider"
+              id="slide-5" class="about__radio">
+
+              <p class="about__count"></p>
+
+              <div class="about__slides">
+                <img src="/layout_KateVR/assets/about-product--k7w-2qO.png"
+                alt="KAT loco device" class="about__slide">
+                <img src="/layout_KateVR/assets/about-product--k7w-2qO.png"
+                alt="KAT loco device" class="about__slide">
+                <img src="/layout_KateVR/assets/about-product--k7w-2qO.png"
+                alt="KAT loco device" class="about__slide">
+                <img src="/layout_KateVR/assets/about-product--k7w-2qO.png"
+                alt="KAT loco device" class="about__slide">
+                <img src="/layout_KateVR/assets/about-product--k7w-2qO.png"
+                alt="KAT loco device" class="about__slide">
+              </div>
+
+              <div class="about__dots">
+                <label for="slide-1" class="about__dot"></label>
+                <label for="slide-2" class="about__dot"></label>
+                <label for="slide-3" class="about__dot"></label>
+                <label for="slide-4" class="about__dot"></label>
+                <label for="slide-5" class="about__dot"></label>
+              </div>
+            </div>
+
+            <div class="about__product-content">
+              <p class="about__text">KAT loco is a foot-based VR locomotion system that gives complete physical control over lower-body actions, allowing you to freely walk, run, and carry out just any other movement in virtual reality.</p>
+
+              <a href="#video" class="play-btn about__play">
+                <img src="/layout_KateVR/assets/video-btn-aw3tN15W.svg" alt="Play Video"
+                class="play-btn__img play-btn__img--default">
+                <img src="/layout_KateVR/assets/video-selected-btn-CzIErQTt.svg" alt="Play Video"
+                class="play-btn__img play-btn__img--hover">
+              </a>
+            </div>
+          </div>
+
+          <div class="about__team">
+            <div class="about__label" aria-hidden="true">
+              <div class="about__label-row about__label-row--top">
+                <span class="about__label-item">ABOUT US</span>
+                <span class="about__label-item">ABOUT US</span>
+                <span class="about__label-item about__label-item--desktop">ABOUT US</span>
+                <span class="about__label-item about__label-item--desktop-big">ABOUT US</span>
+              </div>
+
+              <div class="about__label-row about__label-row--bottom">
+                <span class="about__label-item">ABOUT US</span>
+                <span class="about__label-item about__label-item--desktop">ABOUT US</span>
+                <span class="about__label-item about__label-item--desktop-big">ABOUT US</span>
+              </div>
+            </div>
+
+            <p class="about__hello">Hello,</p>
+            <h2 class="about__title">NICE TO MEET <span>YOU!</span></h2>
+            <p class="about__text">KAT VR is an independent company dedicated to the research, development, and sales of VR Locomotion products and solutions. Founded in 2013, we have quickly grown to become one of the world's leading professional suppliers of VR games' &amp; simulations' equipment</p>
+          </div>
+        </section>
+
+        <section class="tech" id="tech">
+          <h2 class="tech__title">TECH <span>SPECS</span></h2>
+
+          <div class="tech__diagram">
+            <img src="/layout_KateVR/assets/tech-camera-DrR5GN49.png" alt="KAT VR loco device"
+            class="tech__image">
+
+            <input type="checkbox" id="tech-sensor-toggle"
+            class="tech__toggle" hidden>
+            <label for="tech-sensor-toggle" class="tech__marker tech__marker--sensor">
+              <img class="tech__marker-icon tech__marker-icon--plus" src="data:image/png;base64,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"
+              alt="Button plus">
+              <img class="tech__marker-icon tech__marker-icon--minus" src="data:image/png;base64,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"
+              alt="Button minus">
+            </label>
+            <div class="tech__tooltip tech__tooltip--sensor">
+              <p class="tech__tooltip-text">Weight: 35g/1.23oz each<br>Dimension: 50mm/1.97in<br>24mm/0.94in<br>Light: LED lights</p>
+            </div>
+
+            <input type="checkbox" id="tech-batteries-toggle"
+            class="tech__toggle" hidden>
+            <label for="tech-batteries-toggle" class="tech__marker tech__marker--batteries">
+              <img class="tech__marker-icon tech__marker-icon--plus" src="data:image/png;base64,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"
+              alt="Button plus">
+              <img class="tech__marker-icon tech__marker-icon--minus" src="data:image/png;base64,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"
+              alt="Button minus">
+            </label>
+            <div class="tech__tooltip tech__tooltip--batteries">
+              <p class="tech__tooltip-text">Type: Lithium-Ion polymer batteries<br>Capacity: 370mAh<br>Battery life: 10h of continuous use, 150 hours on stand by<br>Charging: Fast charging - 1 hour<br>Charging voltage and current: 5V = 0.5A</p>
+            </div>
+
+            <input type="checkbox" id="tech-connection-toggle"
+            class="tech__toggle" hidden>
+            <label for="tech-connection-toggle" class="tech__marker tech__marker--connection">
+              <img class="tech__marker-icon tech__marker-icon--plus" src="data:image/png;base64,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"
+              alt="Button plus">
+              <img class="tech__marker-icon tech__marker-icon--minus" src="data:image/png;base64,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"
+              alt="Button minus">
+            </label>
+            <div class="tech__tooltip tech__tooltip--connection">
+              <p class="tech__tooltip-text">Wireless: Bluetooth 4.2<br>Signal range: 5m<br>Receiver: USB 2.0 and above</p>
+            </div>
+          </div>
+
+          <div class="tech__full">
+            <img src="data:image/svg+xml,%3csvg%20width='432'%20height='72'%20viewBox='0%200%20432%2072'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%203H431V72'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='3'%20cy='3'%20r='3'%20fill='%2305C2DF'/%3e%3c/svg%3e" alt="Line 1"
+            class="tech__line tech__line--top">
+            <img src="data:image/svg+xml,%3csvg%20width='241'%20height='113'%20viewBox='0%200%20241%20113'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0.5%20110H148V3H237'%20stroke='%2305C2DF'/%3e%3cpath%20d='M6%20109.5C6%20111.157%204.65685%20112.5%203%20112.5C1.34315%20112.5%200%20111.157%200%20109.5C0%20107.843%201.34315%20106.5%203%20106.5C4.65685%20106.5%206%20107.843%206%20109.5Z'%20fill='%2305C2DF'/%3e%3cpath%20d='M240.958%203C240.958%204.65685%20239.615%206%20237.958%206C236.301%206%20234.958%204.65685%20234.958%203C234.958%201.34315%20236.301%200%20237.958%200C239.615%200%20240.958%201.34315%20240.958%203Z'%20fill='%2305C2DF'/%3e%3c/svg%3e" alt="Line 2"
+            class="tech__line tech__line--bottom-left">
+            <img src="data:image/svg+xml,%3csvg%20width='283'%20height='245'%20viewBox='0%200%20283%20245'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M280%205.5V242H3.5'%20stroke='%2305C2DF'/%3e%3cpath%20d='M283%202.99998C283%204.65683%20281.657%205.99998%20280%205.99998C278.343%205.99998%20277%204.65683%20277%202.99998C277%201.34312%20278.343%20-2.46877e-05%20280%20-2.46877e-05C281.657%20-2.46877e-05%20283%201.34312%20283%202.99998Z'%20fill='%2305C2DF'/%3e%3ccircle%20cx='3'%20cy='242'%20r='3'%20fill='%2305C2DF'/%3e%3c/svg%3e" alt="Line 3"
+            class="tech__line tech__line--right">
+
+            <img src="/layout_KateVR/assets/tech-camera-DrR5GN49.png" alt="KAT VR loco device"
+            class="tech__full-image">
+
+            <div class="tech__block tech__block--sensor">
+              <h3 class="tech__block-title">SENSOR</h3>
+              <p class="tech__block-text">Weight: 35g/1.23oz each<br>Dimension: 50mm/1.97in<br>24mm/0.94in<br>Light: LED lights</p>
+            </div>
+
+            <div class="tech__block tech__block--connection">
+              <h3 class="tech__block-title">CONNECTION</h3>
+              <p class="tech__block-text">Wireless: Bluetooth 4.2<br>Signal range: 5m<br>Receiver: USB 2.0 and above</p>
+            </div>
+
+            <div class="tech__block tech__block--batteries">
+              <h3 class="tech__block-title">BATTERIES</h3>
+              <p class="tech__block-text">Type: Lithium-Ion polymer batteries<br>Capacity: 370mAh<br>Battery life: 10h of continuous use, 150 hours on stand by<br>Charging: Fast charging - 1 hour<br>Charging voltage and current: 5V = 0.5A</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="why" id="why">
+          <h2 class="why__title">WHY <img src="/layout_KateVR/assets/katloco-aoH-7keB.png"
+            alt="KAT LOCO?" class="why__title-image">
+          </h2>
+
+          <div class="why__grid">
+            <div class="why__item">
+              <img src="/layout_KateVR/assets/info1-Dd8sXml8.png"
+              alt="Universally compatible" class="why__icon">
+              <h3 class="why__item-title">UNIVERSALLY COMPATIBLE</h3>
+              <p class="why__item-text">KAT Loco offers universal compatibility across all major VR headsets and platforms allowing you to play any VR game with support for Free Locomotion</p>
+            </div>
+
+            <div class="why__item">
+              <img src="data:image/png;base64,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"
+              alt="VR/PC control panel" class="why__icon">
+              <h3 class="why__item-title">VR/PC CONTROL PANEL</h3>
+              <p class="why__item-text">Our Multifunctional Software allows for quick access to KAT Loco's control panel both from a computer desktop, and directly from your VR headset.</p>
+            </div>
+
+            <div class="why__item">
+              <img src="/layout_KateVR/assets/info3-pcVwuPWa.png"
+              alt="Wireless sensors" class="why__icon">
+              <h3 class="why__item-title">WIRELESS SENSORS</h3>
+              <p class="why__item-text">What makes it even more advanced, KAT Loco is entirely wireless, and comes with a complete system of algorithms, super durable batteries and more!</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="why__buy btn">Buy Now</a>
+        </section>
+
+        <section class="contact" id="contact">
+          <p class="contact__eyebrow">Have any questions?</p>
+          <h2 class="contact__title">GET IN <span>TOUCH</span></h2>
+
+          <p class="contact__note">Our manager will reply you within 15 minutes</p>
+
+          <ul class="contact__list">
+            <li class="contact__list-item"><a href="tel:+86057186105373">+86-0571-86105373</a></li>
+            <li class="contact__list-item"><a href="mailto:global@katvr.com">global@katvr.com</a></li>
+            <li class="contact__list-item"><a href="mailto:overseas@katvr.com">overseas@katvr.com</a></li>
+          </ul>
+
+          <form class="contact__form" action="#form-success"
+          method="get">
+            <div class="contact__field" data-error="Please, fill your name*">
+              <input type="text" id="contact-name"
+              name="name" placeholder="Name*"
+              required class="contact__input">
+              <label for="contact-name" class="input-group__label">Name*</label>
+            </div>
+            <div class="contact__field" data-error="Please, enter a valid email*">
+              <input type="email" id="contact-email"
+              name="email" placeholder="Email*"
+              required class="contact__input">
+              <label for="contact-email" class="input-group__label">Email*</label>
+            </div>
+            <div class="contact__field" data-error="Please, enter a valid phone*">
+              <input
+                type="tel"
+                id="contact-phone"
+                name="phone"
+                placeholder="Phone*"
+                required
+                pattern="\+?[0-9\s\-()]{7,}"
+                minlength="7"
+                inputmode="tel"
+                class="contact__input"
+              >
+              <label for="contact-phone" class="input-group__label">Phone*</label>
+            </div>
+            <div class="contact__field" data-error="Please, write your request*">
+              <textarea id="contact-message" name="message"
+              placeholder="Message" required class="contact__input contact__input--textarea"></textarea>
+              <label for="contact-message" class="input-group__label">Message</label>
+            </div>
+
+            <div class="contact__actions">
+              <button type="submit" class="contact__submit">Contact Us</button>
+              <a href="#top" class="contact__scroll-top">
+                <img src="data:image/png;base64,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" alt="Scroll to top">
+              </a>
+            </div>
+          </form>
+
+          <div id="form-success" class="form-success">
+            <div class="form-success__inner">
+              <a href="#contact" class="form-success__close">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAPlJREFUeAHN2G0NwyAQBmAkVEIlVEodzMIkzMmkTEIlTEIlvKMbzQgJLR937/WS+wNNeAKUIzjnA8DT580ZhB938PnyOe0NM/5BRQXMEsZe4o4HG5Vg3j7H9AMa6hTDRBVjGKhqjCaqGaOB6sZIosQwEihxTA9KDdOCUsfUoGiYEhQdc4Qyw2RQd1NMBmWLCaBtmdZ4ppxVJHtmzW10C8x3mWBwyctioj4uCgW/Ng2FinNGHYWGQ08NhY4TWBwFgXIghoJgbepGQaFQNqOgWLWrUSBcIYpRDEwxiok5RVlgDlH4PRbRMRnUvDVMYYZGZxQBtRkGd5XYMR8bjTSe1Y/+ygAAAABJRU5ErkJggg==" alt="Close">
+              </a>
+              <p class="form-success__text">Thank you! Your message has been sent — our manager will reply within 15 minutes.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- #region video modal -->
+        <div id="video" class="video-modal">
+          <div class="video-modal__inner">
+            <a href="#about" class="video-modal__close">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAPlJREFUeAHN2G0NwyAQBmAkVEIlVEodzMIkzMmkTEIlTEIlvKMbzQgJLR937/WS+wNNeAKUIzjnA8DT580ZhB938PnyOe0NM/5BRQXMEsZe4o4HG5Vg3j7H9AMa6hTDRBVjGKhqjCaqGaOB6sZIosQwEihxTA9KDdOCUsfUoGiYEhQdc4Qyw2RQd1NMBmWLCaBtmdZ4ppxVJHtmzW10C8x3mWBwyctioj4uCgW/Ng2FinNGHYWGQ08NhY4TWBwFgXIghoJgbepGQaFQNqOgWLWrUSBcIYpRDEwxiok5RVlgDlH4PRbRMRnUvDVMYYZGZxQBtRkGd5XYMR8bjTSe1Y/+ygAAAABJRU5ErkJggg==" alt="Close">
+            </a>
+
+            <video src="/layout_KateVR/assets/promo-XDyi4t9s.mp4" controls
+            class="video-modal__player"></video>
+          </div>
+        </div>
+      </main>
+      <!-- #endregion -->
+
+      <div class="hero__buy-bar">
+        <a class="page-link hero__buy" href="#contact">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- #region footer -->
+    <footer class="page__footer">
+      <div class="footer">
+        <div class="footer__logo">
+          <a href="#top" class="footer__logo-link">
+            <img src="data:image/png;base64,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" alt="KateVR">
+          </a>
+        </div>
+
+        <div class="footer__row">
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li><a href="#about" class="footer__nav-link page-link">About</a></li>
+              <li><a href="#tech" class="footer__nav-link page-link">Tech</a></li>
+              <li><a href="#benefits" class="footer__nav-link page-link">Benefits</a></li>
+              <li><a href="#contact" class="footer__nav-link page-link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__contacts-group">
+            <ul class="footer__contacts">
+              <li><a href="tel:+86057186105373" class="footer__contact-link page-link">+86-0571-86105373</a></li>
+              <li><a href="mailto:global@katvr.com" class="footer__contact-link page-link">global@katvr.com</a></li>
+              <li><a href="mailto:overseas@katvr.com" class="footer__contact-link page-link">overseas@katvr.com</a></li>
+            </ul>
+
+            <ul class="footer__social">
+              <li>
+                <a href="https://www.facebook.com/" target="_blank"
+                class="footer__social-link page-link"><img src="data:image/svg+xml,%3csvg%20width='10'%20height='20'%20viewBox='0%200%2010%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2.32847%2010.905V19.095H5.82117V10.905H8.77056L9.35268%206.83257H5.82117V4.0724H9.35268V0H5.82117C3.89518%200%202.32847%201.82675%202.32847%204.0724V6.83257H0V10.905H2.32847Z'%20fill='white'/%3e%3c/svg%3e" alt="Facebook"></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" target="_blank"
+                class="footer__social-link page-link"><img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.7229%2017.5038C7.71181%2017.5038%206.6711%2017.4289%205.62416%2017.2787C3.78018%2017.0141%201.91355%2016.1318%201.38535%2015.8677L0%2015.1749L1.49987%2014.7237C3.13942%2014.2306%204.13677%2013.9247%205.37138%2013.4456C4.13517%2012.898%203.18241%2011.913%202.72378%2010.6396L2.37485%209.67074L2.66098%209.71072C2.38966%209.46058%202.17542%209.20669%202.00934%208.97581C1.4187%208.15524%201.10599%207.15258%201.17253%206.29334L1.23818%205.44764L1.79171%205.64377C1.5582%205.24042%201.38945%204.80966%201.29027%204.35818C1.04855%203.25712%201.25084%202.08738%201.86003%201.06448L2.34221%200.254843L2.98707%200.963316C5.02656%203.20426%207.60977%204.53358%2010.6757%204.92274C10.5505%204.13317%2010.6443%203.37118%2010.9549%202.68816C11.3165%201.89288%2011.9597%201.21851%2012.8145%200.737819C13.7639%200.204098%2014.9152%20-0.0545221%2016.0564%200.00960274C17.2671%200.0776435%2018.3663%200.492578%2019.2393%201.21035C19.6656%201.10902%2019.9798%201.00084%2020.4043%200.854647C20.6598%200.766699%2020.9495%200.666841%2021.312%200.552624L22.6477%200.131652L21.7767%202.40718C21.8341%202.40278%2021.8933%202.39903%2021.9552%202.39658L23.3816%202.33751L22.5385%203.39141C22.4902%203.45178%2022.4779%203.46891%2022.4608%203.49257C22.3928%203.58623%2022.3082%203.70273%2021.1511%205.11609C20.8614%205.47%2020.7167%205.93095%2020.7436%206.41425C20.8462%208.25086%2020.5998%209.91256%2020.011%2011.353C19.4541%2012.7158%2018.591%2013.885%2017.4462%2014.8283C16.0294%2015.9953%2014.2229%2016.7943%2012.0766%2017.2029C11.0237%2017.4032%209.89311%2017.5038%208.7229%2017.5038Z'%20fill='white'/%3e%3c/svg%3e" alt="Twitter"></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/" target="_blank"
+                class="footer__social-link page-link"><img src="data:image/svg+xml,%3csvg%20width='23'%20height='18'%20viewBox='0%200%2023%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18.8638%200H3.2375C1.45249%200%200%201.48277%200%203.305V13.881C0%2015.7032%201.45249%2017.186%203.2375%2017.186H18.8638C20.6488%2017.186%2022.1013%2015.7032%2022.1013%2013.881V3.305C22.1013%201.48277%2020.6488%200%2018.8638%200ZM7.81317%2013.1503V4.16481L15.6046%208.58335L7.81317%2013.1503Z'%20fill='white'/%3e%3cpath%20d='M9.10742%206.41064V10.8666L12.9707%208.60239L9.10742%206.41064Z'%20fill='white'/%3e%3c/svg%3e" alt="YouTube"></a>
+              </li>
+              <li>
+                <a href="https://www.reddit.com/" target="_blank"
+                class="footer__social-link page-link"><img src="data:image/svg+xml,%3csvg%20width='22'%20height='23'%20viewBox='0%200%2022%2023'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37425%2013.5984C1.31797%2013.9334%201.27868%2014.2726%201.27868%2014.6196C1.27868%2018.8422%205.66581%2022.2775%2010.954%2022.2775C16.2422%2022.2775%2020.5441%2018.8422%2020.5441%2014.6196C20.5441%2014.2726%2020.5048%2013.9334%2020.4485%2013.5984C21.2777%2013.1277%2021.8228%2012.1982%2021.8228%2011.1388C21.8228%209.60301%2020.6758%208.35406%2019.2654%208.35406C18.6209%208.35406%2018.0154%208.61712%2017.551%209.0758C15.944%207.85587%2013.8119%207.07993%2011.4545%206.98203L12.6779%201.81458L15.4369%202.86573C15.4773%204.3634%2016.6018%205.56938%2017.9867%205.56938C19.3971%205.56938%2020.5441%204.32044%2020.5441%202.78469C20.5441%201.24894%2019.3971%200%2017.9867%200C17.0034%200%2016.158%200.613864%2015.7302%201.50203L11.7875%200.000725179L10.1305%206.99508C7.90084%207.14737%205.80533%207.91152%204.27175%209.0758C3.8074%208.61712%203.20186%208.35406%202.55736%208.35406C1.14698%208.35406%200%209.60301%200%2011.1388C0%2012.1982%200.545103%2013.1277%201.37425%2013.5984ZM14.79%2011.1388C15.8476%2011.1388%2016.7081%2012.0757%2016.7081%2013.2273C16.7081%2014.3789%2015.8476%2015.3158%2014.79%2015.3158C13.7325%2015.3158%2012.872%2014.3789%2012.872%2013.2273C12.872%2012.0757%2013.7325%2011.1388%2014.79%2011.1388ZM14.5167%2017.2888L15.0634%2018.5465C13.8635%2019.1658%2012.4425%2019.4928%2010.954%2019.4928C9.46555%2019.4928%207.95927%2019.1658%206.75935%2018.5465L7.30612%2017.2886C9.36665%2018.3507%2012.4561%2018.3507%2014.5167%2017.2888ZM7.03273%2011.1388C8.09031%2011.1388%208.95075%2012.0757%208.95075%2013.2273C8.95075%2014.3789%208.09031%2015.3158%207.03273%2015.3158C5.97516%2015.3158%205.11471%2014.3789%205.11471%2013.2273C5.11471%2012.0757%205.97516%2011.1388%207.03273%2011.1388Z'%20fill='white'/%3e%3c/svg%3e" alt="Reddit"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- #endregion -->
+
+    <script src="src/scripts/main.js"></script>
+  </body>
+</html>
